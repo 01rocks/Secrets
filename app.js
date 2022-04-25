@@ -61,6 +61,7 @@ app.post("/login",function(req,res){
   const password= req.body.password;
   User.findOne({email:username},function(err,foundUser){
     if(err){
+      console.log("a");//bas time pass karne ke liye console kiye hai 
       console.log(err);
     }else{
       if(foundUser){
